@@ -1,57 +1,37 @@
 # Robotic Hepatobiliary Navigation
 
-Scene segmentation for robotic intraoperative navigation and path planning in hepatobiliary surgery.
+Semantic scene understanding for robotic hepatobiliary surgery using deep learning-based segmentation.
 
-This project explores surgical scene segmentation using UNet and TransUNet to support robotic intraoperative navigation and path planning in hepatobiliary surgery.
+---
 
-The system identifies key structures such as liver, gallbladder, and surgical instruments to provide semantic perception for autonomous or assisted robotic navigation.
+## 🧠 Overview
 
-## Features
+This project explores surgical scene segmentation to support robotic intraoperative navigation and path planning. We compare three representative models:
 
-- Surgical scene segmentation
-- UNet baseline model
-- TransUNet transformer-based segmentation
-- Liver, gallbladder, and instrument detection
-- Visualization of segmentation results
+- **UNet** (baseline CNN)
+- **TransUNet** (CNN + Transformer hybrid)
+- **nnUNet** (self-configuring state-of-the-art framework)
 
-## Dataset
+The system identifies key anatomical structures:
 
-The project uses laparoscopic hepatobiliary surgery images.
+- Liver
+- Gallbladder
+- Surgical instruments
 
-Dataset structure:
-```
-dataset/
-  train/
-    images/
-    masks/
+---
 
-  val/
-    images/
-    masks/
+## 📊 Model Comparison
 
-  test/
-    images/
-```
+We visualize segmentation results using overlay maps for intuitive comparison.
 
-## Training
+### Example Results
 
-Train UNet:
+| Original | UNet | TransUNet | nnUNet |
+|---------|------|-----------|--------|
+| ![](results/compare/153_compare.png) |
 
-```bash
-python train_unet_4class_dice.py
+> Additional examples are provided in `results/compare/`
 
-## Results
+---
 
-### UNet
-
-Example prediction 1:
-
-![unet1](predict_results/unet/409_overlay.png)
-
-Example prediction 2:
-
-![unet2](predict_results/unet/567_overlay.png)
-
-Training curves:
-
-![unet_curve](predict_results/unet/unet_4class_dice_curves.png)
+## 🏗️ Project Structure
