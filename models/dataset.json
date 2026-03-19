@@ -1,0 +1,14 @@
+{
+    "channel_names": {
+        "0": "image"
+    },
+    "labels": {
+        "background": 0,
+        "liver": 1,
+        "gallbladder": 2,
+        "instrument": 3
+    },
+    "numTraining": 3901,
+    "file_ending": ".png",
+    "overwrite_image_reader_writer": "NaturalImage2DIO"
+}
